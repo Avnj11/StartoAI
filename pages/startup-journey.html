@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Startup Journey | CyberCypher</title>
+    <link rel="stylesheet" href="../cyc4.css" />
+    <link rel="stylesheet" href="startup-journey.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- Header -->
+      <header class="top-header">
+        <div class="header-left">
+          <button onclick="window.location.href='../dashboard.html'" class="back-btn">
+            <span class="material-symbols-rounded">arrow_back</span>
+            Back
+          </button>
+          <h1>Startup Journey</h1>
+        </div>
+        <div class="header-right">
+          <button onclick="window.location.href='tasks.html'" class="time-btn" id="current-time"></button>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Progress Overview -->
+        <section class="progress-section">
+          <div class="progress-header">
+            <h2>Journey Progress</h2>
+            <div class="progress-stats">
+              <div class="stat-card">
+                <span class="stat-value">75%</span>
+                <span class="stat-label">Completion</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">12</span>
+                <span class="stat-label">Milestones</span>
+              </div>
+            </div>
+          </div>
+          <div class="journey-timeline">
+            <!-- Timeline items will be dynamically added -->
+          </div>
+        </section>
+
+        <!-- Milestones Grid -->
+        <section class="milestones-section">
+          <h2>Key Milestones</h2>
+          <div class="milestones-grid">
+            <div class="milestone-card completed">
+              <div class="milestone-icon">
+                <span class="material-symbols-rounded">rocket_launch</span>
+              </div>
+              <div class="milestone-content">
+                <h3>Idea Validation</h3>
+                <p>Market research and validation complete</p>
+                <div class="milestone-meta">
+                  <span class="date">Completed on Mar 15</span>
+                  <span class="badge">Phase 1</span>
+                </div>
+              </div>
+            </div>
+            <!-- More milestone cards -->
+          </div>
+        </section>
+
+        <!-- AI Insights -->
+        <section class="insights-section">
+          <h2>AI Growth Insights</h2>
+          <div class="insights-container">
+            <div class="insight-card">
+              <div class="insight-header">
+                <span class="material-symbols-rounded">tips_and_updates</span>
+                <h3>Next Steps</h3>
+              </div>
+              <div class="insight-content">
+                <p>Based on your progress, consider focusing on:</p>
+                <ul class="action-items">
+                  <li>Expand your market research</li>
+                  <li>Begin MVP development</li>
+                  <li>Connect with potential users</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Quick Actions Sidebar -->
+      <aside class="actions-sidebar">
+        <div class="actions-container">
+          <h3>Quick Actions</h3>
+          <div class="action-buttons">
+            <button class="action-btn">
+              <span class="material-symbols-rounded">add_task</span>
+              Add Milestone
+            </button>
+            <button class="action-btn">
+              <span class="material-symbols-rounded">analytics</span>
+              View Analytics
+            </button>
+            <button class="action-btn">
+              <span class="material-symbols-rounded">share</span>
+              Share Progress
+            </button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <script src="startup-journey.js"></script>
+  </body>
+</html>

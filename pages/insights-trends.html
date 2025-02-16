@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insights & Trends | CyberCypher</title>
+    <link rel="stylesheet" href="../cyc4.css" />
+    <link rel="stylesheet" href="insights-trends.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- Navigation Sidebar -->
+      <nav class="side-nav">
+        <div class="nav-logo">
+          <img src="../images/logo.svg" alt="CyberCypher Logo" />
+        </div>
+        <div class="nav-links">
+          <a href="startup-strategy.html">
+            <span class="material-symbols-rounded">rocket_launch</span>
+            Startup Strategy
+          </a>
+          <a href="insights-trends.html" class="active">
+            <span class="material-symbols-rounded">trending_up</span>
+            Insights & Trends
+          </a>
+          <!-- Other nav links -->
+        </div>
+        <button onclick="window.location.href='../dashboard.html'" class="back-btn">
+          <span class="material-symbols-rounded">arrow_back</span>
+          Back to Dashboard
+        </button>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="page-header">
+          <h1>Insights & Trends</h1>
+          <p>AI-Curated Market Intelligence & Startup Trends</p>
+        </header>
+
+        <!-- Trending Topics -->
+        <section class="trends-section">
+          <h2>Trending in Tech</h2>
+          <div class="trends-grid">
+            <div class="trend-card hot">
+              <div class="trend-header">
+                <span class="trend-badge">🔥 Hot Topic</span>
+                <span class="trend-date">Today</span>
+              </div>
+              <h3>AI in Healthcare Startups</h3>
+              <p>Growing investment in AI-powered healthcare solutions...</p>
+              <div class="trend-stats">
+                <span>📈 +245% Growth</span>
+                <span>💰 $2.1B Funding</span>
+              </div>
+            </div>
+            <!-- More trend cards -->
+          </div>
+        </section>
+
+        <!-- Market Analysis -->
+        <section class="market-section">
+          <h2>Market Intelligence</h2>
+          <div class="market-insights">
+            <div class="insight-card">
+              <div class="chart-container">
+                <!-- Market trend chart -->
+              </div>
+              <div class="insight-content">
+                <h3>Industry Growth Forecast</h3>
+                <p>AI Analysis predicts 32% growth in SaaS sector...</p>
+              </div>
+            </div>
+            <!-- More insight cards -->
+          </div>
+        </section>
+
+        <!-- Funding Updates -->
+        <section class="funding-section">
+          <h2>Recent Funding</h2>
+          <div class="funding-feed">
+            <div class="funding-card">
+              <div class="company-info">
+                <img src="../images/company-logo.png" alt="Company" />
+                <div>
+                  <h3>TechStart Inc.</h3>
+                  <p>AI Infrastructure</p>
+                </div>
+              </div>
+              <div class="funding-details">
+                <span class="amount">$50M</span>
+                <span class="round">Series B</span>
+              </div>
+            </div>
+            <!-- More funding cards -->
+          </div>
+        </section>
+      </main>
+
+      <!-- AI Assistant Sidebar -->
+      <aside class="ai-sidebar">
+        <div class="ai-assistant">
+          <div class="ai-header">
+            <h3>AI Insights Assistant</h3>
+            <span class="status online">Active</span>
+          </div>
+          <div class="chat-container">
+            <!-- AI chat messages -->
+          </div>
+          <div class="input-container">
+            <input type="text" placeholder="Ask about market trends..." />
+            <button class="send-btn">
+              <span class="material-symbols-rounded">send</span>
+            </button>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <script src="insights-trends.js"></script>
+  </body>
+</html>

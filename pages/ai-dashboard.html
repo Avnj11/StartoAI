@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Dashboard | CyberCypher</title>
+    <link rel="stylesheet" href="../cyc4.css" />
+    <link rel="stylesheet" href="ai-dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- Navigation Sidebar -->
+      <nav class="side-nav">
+        <div class="nav-logo">
+          <img src="../images/logo.svg" alt="CyberCypher Logo" />
+        </div>
+        <div class="nav-links">
+          <a href="startup-strategy.html">
+            <span class="material-symbols-rounded">rocket_launch</span>
+            Startup Strategy
+          </a>
+          <a href="ai-dashboard.html" class="active">
+            <span class="material-symbols-rounded">dashboard</span>
+            AI Dashboard
+          </a>
+          <!-- Other nav links -->
+        </div>
+        <button onclick="window.location.href='../home.html'" class="back-btn">
+          <span class="material-symbols-rounded">arrow_back</span>
+          Back to Dashboard
+        </button>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="page-header">
+          <h1>AI Dashboard</h1>
+          <p>Your Personalized AI-Powered Command Center</p>
+        </header>
+
+        <!-- AI Insights Grid -->
+        <div class="insights-grid">
+          <div class="insight-card">
+            <h3>Business Health Score</h3>
+            <div class="score-circle">
+              <span class="score">85</span>
+              <span class="label">Good</span>
+            </div>
+            <div class="recommendations">
+              <h4>AI Recommendations</h4>
+              <ul>
+                <li>Optimize customer acquisition</li>
+                <li>Review pricing strategy</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="insight-card">
+            <h3>Growth Trajectory</h3>
+            <div class="chart-area">
+              <!-- Chart will be rendered here -->
+            </div>
+          </div>
+
+          <div class="insight-card">
+            <h3>Priority Tasks</h3>
+            <div class="task-list">
+              <!-- AI-suggested tasks -->
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Action Center -->
+        <section class="action-center">
+          <h2>AI Action Center</h2>
+          <div class="action-grid">
+            <button class="action-btn">
+              <span class="material-symbols-rounded">analytics</span>
+              Generate Report
+            </button>
+            <button class="action-btn">
+              <span class="material-symbols-rounded">trending_up</span>
+              Growth Analysis
+            </button>
+            <button class="action-btn">
+              <span class="material-symbols-rounded">schedule</span>
+              Schedule Review
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <!-- AI Assistant Sidebar -->
+      <aside class="ai-sidebar">
+        <!-- Similar to startup-strategy.html -->
+      </aside>
+    </div>
+    <script src="ai-dashboard.js"></script>
+  </body>
+</html>

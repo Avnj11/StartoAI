@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legal & Compliance | CyberCypher</title>
+    <link rel="stylesheet" href="../cyc4.css" />
+    <link rel="stylesheet" href="legal-compliance.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- Header -->
+      <header class="top-header">
+        <div class="header-left">
+          <button onclick="window.location.href='../dashboard.html'" class="back-btn">
+            <span class="material-symbols-rounded">arrow_back</span>
+            Back
+          </button>
+          <h1>Legal & Compliance Assistant</h1>
+        </div>
+        <div class="header-right">
+          <button onclick="window.location.href='tasks.html'" class="time-btn" id="current-time"></button>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="chat-container">
+          <div class="chat-box" id="chat-box">
+            <!-- Welcome message -->
+            <div class="chat-message bot">
+              <img src="../images/gemini.svg" alt="AI Assistant" class="bot-avatar" />
+              <div class="message-content">
+                <p>Hello! I'm your Legal & Compliance AI Assistant. I can help you with:</p>
+                <ul>
+                  <li>Legal document templates</li>
+                  <li>Compliance requirements</li>
+                  <li>Startup legal guidance</li>
+                  <li>Regulatory information</li>
+                </ul>
+                <p>How can I assist you today?</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Typing area -->
+          <div class="typing-area">
+            <form class="typing-form" id="chat-form">
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  class="typing-input"
+                  placeholder="Ask about legal & compliance matters..."
+                  id="user-input"
+                  required
+                />
+                <button type="submit" class="send-btn">
+                  <span class="material-symbols-rounded">send</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="legal-compliance.js"></script>
+  </body>
+</html>

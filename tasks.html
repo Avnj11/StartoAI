@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks - Starto AI</title>
+    <link rel="stylesheet" href="cyc4.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&family=Outfit:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="tasks-page">
+      <nav class="top-bar">
+        <div class="nav-left">
+          <div class="time" id="current-time"></div>
+          <button onclick="window.location.href='dashboard.html'" class="back-btn">Back</button>
+        </div>
+        <div class="nav-right">
+          <div class="calendar-controls">
+            <button class="view-toggle" data-view="week">Week</button>
+            <button class="view-toggle active" data-view="month">Month</button>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+          </div>
+          <button onclick="window.location.href='index.html'" class="logout-btn">Logout</button>
+        </div>
+      </nav>
+
+      <div class="tasks-container">
+        <div class="sidebar">
+          <div class="quick-add">
+            <button class="add-btn">+ Quick Add</button>
+          </div>
+          <div class="ai-insights">
+            <h3>AI Insights</h3>
+            <div class="insight-card">
+              <span class="insight-icon">⚡</span>
+              <p>Most productive: 9AM - 11AM</p>
+            </div>
+            <div class="insight-card warning">
+              <span class="insight-icon">⚠️</span>
+              <p>Meeting overload detected this week</p>
+            </div>
+          </div>
+          <div class="calendar-sync">
+            <h3>Connected Calendars</h3>
+            <div class="sync-item active">
+              <span class="sync-icon">📧</span>
+              <span>Google Calendar</span>
+            </div>
+            <div class="sync-item">
+              <span class="sync-icon">💼</span>
+              <span>Outlook</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-calendar">
+          <div class="calendar-header">
+            <div class="month-navigation">
+              <button id="prevMonth">&lt;</button>
+              <h3 id="currentMonth">September 2024</h3>
+              <button id="nextMonth">&gt;</button>
+            </div>
+            <div class="view-options">
+              <button class="focus-mode-btn">🎯 Focus Mode</button>
+            </div>
+          </div>
+
+          <div class="calendar-grid">
+            <div class="weekday">Sun</div>
+            <div class="weekday">Mon</div>
+            <div class="weekday">Tue</div>
+            <div class="weekday">Wed</div>
+            <div class="weekday">Thu</div>
+            <div class="weekday">Fri</div>
+            <div class="weekday">Sat</div>
+            <!-- Calendar days will be inserted by JavaScript -->
+          </div>
+        </div>
+
+        <div class="events-panel">
+          <div class="events-header">
+            <h3>Today's Schedule</h3>
+            <div class="event-filters">
+              <button class="filter-btn active" data-type="all">All</button>
+              <button class="filter-btn" data-type="meeting">Meetings</button>
+              <button class="filter-btn" data-type="task">Tasks</button>
+            </div>
+          </div>
+
+          <div class="events-list">
+            <div class="event meeting" draggable="true">
+              <div class="event-priority high"></div>
+              <span class="event-time">09:00 AM</span>
+              <div class="event-details">
+                <h4>Team Sync</h4>
+                <p>Weekly Sprint Planning</p>
+                <div class="event-actions">
+                  <button class="action-btn">📝</button>
+                  <button class="action-btn">⏰</button>
+                  <button class="action-btn">✏️</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="event task" draggable="true">
+              <div class="event-priority medium"></div>
+              <span class="event-time">02:30 PM</span>
+              <div class="event-details">
+                <h4>Project Review</h4>
+                <p>Prepare presentation deck</p>
+                <div class="event-actions">
+                  <button class="action-btn">📝</button>
+                  <button class="action-btn">⏰</button>
+                  <button class="action-btn">✏️</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="event deadline" draggable="true">
+              <div class="event-priority urgent"></div>
+              <span class="event-time">04:00 PM</span>
+              <div class="event-details">
+                <h4>Investor Pitch</h4>
+                <p>Final deck submission</p>
+                <div class="event-actions">
+                  <button class="action-btn">📝</button>
+                  <button class="action-btn">⏰</button>
+                  <button class="action-btn">✏️</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quick-add-modal" id="quickAddModal">
+      <!-- Quick Add Form will be added here -->
+    </div>
+
+    <script src="cyc4.js"></script>
+  </body>
+</html>

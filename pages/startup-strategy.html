@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Startup Strategy | CyberCypher</title>
+    <link rel="stylesheet" href="../cyc4.css" />
+    <link rel="stylesheet" href="startup-strategy.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- Header spans full width -->
+      <header class="top-header">
+        <div class="header-left">
+          <button onclick="window.location.href='../dashboard.html'" class="back-btn">
+            <span class="material-symbols-rounded">arrow_back</span>
+            Back
+          </button>
+          <h1>Startup Strategy</h1>
+        </div>
+        <div class="header-right">
+          <button onclick="window.location.href='../tasks.html'" class="time-btn" id="current-time"></button>
+        </div>
+      </header>
+
+      <!-- Split content container -->
+      <div class="split-container">
+        <!-- Left side - Main Content -->
+        <main class="main-content">
+          <!-- Idea Validation Section -->
+          <section class="validation-section">
+            <h2>AI-Assisted Idea Validation</h2>
+            <div class="validation-tools">
+              <div class="tool-card">
+                <div class="tool-header">
+                  <span class="material-symbols-rounded">psychology</span>
+                  <h3>Idea Analysis</h3>
+                </div>
+                <div class="tool-content">
+                  <textarea placeholder="Describe your startup idea..." class="idea-input"></textarea>
+                  <button class="analyze-btn">
+                    Analyze with AI
+                    <span class="material-symbols-rounded">analytics</span>
+                  </button>
+                </div>
+                <div class="analysis-results" id="analysisResults">
+                  <!-- AI analysis will appear here -->
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- MVP Builder Section -->
+          <section class="mvp-section">
+            <h2>MVP Builder</h2>
+            <div class="mvp-builder">
+              <div class="mvp-stages">
+                <div class="stage-card active">
+                  <div class="stage-number">1</div>
+                  <h3>Core Features</h3>
+                  <p>Define essential features</p>
+                </div>
+                <div class="stage-card">
+                  <div class="stage-number">2</div>
+                  <h3>User Flow</h3>
+                  <p>Map user journey</p>
+                </div>
+                <div class="stage-card">
+                  <div class="stage-number">3</div>
+                  <h3>Timeline</h3>
+                  <p>Set development milestones</p>
+                </div>
+              </div>
+              <div class="mvp-workspace">
+                <!-- Dynamic workspace content -->
+              </div>
+            </div>
+          </section>
+
+          <!-- Market Research Section -->
+          <section class="market-research">
+            <h2>Product-Market Fit</h2>
+            <div class="research-tools">
+              <div class="survey-builder">
+                <h3>Survey Builder</h3>
+                <div class="survey-templates">
+                  <!-- Survey templates -->
+                </div>
+                <button class="create-survey-btn">
+                  Create New Survey
+                  <span class="material-symbols-rounded">add_circle</span>
+                </button>
+              </div>
+              <div class="feedback-analysis">
+                <h3>User Feedback Analysis</h3>
+                <div class="feedback-metrics">
+                  <!-- AI-analyzed feedback metrics -->
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- Right side - AI Assistant -->
+        <aside class="ai-assistant">
+          <div class="ai-header">
+            <h3>Strategy Assistant</h3>
+          </div>
+          <div class="chat-messages" id="chatMessages">
+            <!-- Initial welcome message -->
+            <div class="message bot">
+              <div class="message-content">
+                <p>Hello! I'm your Startup Strategy Assistant. I can help you with:</p>
+                <ul>
+                  <li>Business model validation</li>
+                  <li>Market entry strategies</li>
+                  <li>MVP planning</li>
+                  <li>Growth strategies</li>
+                </ul>
+                <p>How can I assist you with your startup strategy today?</p>
+              </div>
+            </div>
+          </div>
+          <form id="chatForm" class="chat-input-form">
+            <input type="text" id="userInput" placeholder="Ask about startup strategy..." required />
+            <button type="submit">
+              <span class="material-symbols-rounded">send</span>
+            </button>
+          </form>
+        </aside>
+      </div>
+    </div>
+
+    <script src="startup-strategy.js"></script>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+/* Page Layout */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--primary-dark);
+  color: white;
+}
+
+/* Navigation Sidebar */
+.side-nav {
+  width: 250px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  height: 100vh;
+}
+
+/* Main Content Area */
+.main-content {
+  margin-left: 250px;
+  padding: 2rem;
+}
+
+/* Page Header */
+.page-header {
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, var(--neon-cyan), var(--electric-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+/* Trending Topics Section */
+.trends-section {
+  margin-bottom: 3rem;
+}
+
+.trends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.trend-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.trend-card:hover {
+  transform: translateY(-5px);
+}
+
+.trend-card.hot {
+  border-left: 4px solid var(--neon-cyan);
+}
+
+.trend-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.trend-badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.trend-stats {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--neon-cyan);
+}
+
+/* Market Analysis Section */
+.market-section {
+  margin-bottom: 3rem;
+}
+
+.market-insights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+}
+
+.insight-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.chart-container {
+  height: 200px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+}
+
+/* Funding Updates Section */
+.funding-section {
+  margin-bottom: 3rem;
+}
+
+.funding-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.funding-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.funding-card:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.company-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.funding-details {
+  text-align: right;
+}
+
+.funding-details .amount {
+  color: var(--neon-cyan);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.funding-details .round {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* AI Assistant Sidebar */
+.ai-sidebar {
+  width: 300px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .main-content {
+    margin-right: 300px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .side-nav {
+    width: 200px;
+  }
+  .main-content {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .side-nav,
+  .ai-sidebar {
+    display: none;
+  }
+  .main-content {
+    margin: 0;
+  }
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.trend-card,
+.insight-card,
+.funding-card {
+  animation: slideIn 0.5s ease-out forwards;
+}
