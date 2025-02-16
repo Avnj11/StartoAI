@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Dashboard | CyberCypher</title>
+    <title>Tasks & Metrics | Starto</title>
     <link rel="stylesheet" href="../cyc4.css" />
-    <link rel="stylesheet" href="ai-dashboard.css" />
+    <link rel="stylesheet" href="tasks.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -13,92 +13,156 @@
   </head>
   <body>
     <div class="page-container">
-      <!-- Navigation Sidebar -->
-      <nav class="side-nav">
-        <div class="nav-logo">
-          <img src="../images/logo.svg" alt="CyberCypher Logo" />
+      <!-- Header -->
+      <header class="top-header">
+        <div class="header-left">
+          <button onclick="window.location.href='../dashboard.html'" class="back-btn">
+            <span class="material-symbols-rounded">arrow_back</span>
+            Back
+          </button>
+          <h1>AI Dashboard</h1>
         </div>
-        <div class="nav-links">
-          <a href="startup-strategy.html">
-            <span class="material-symbols-rounded">rocket_launch</span>
-            Startup Strategy
-          </a>
-          <a href="ai-dashboard.html" class="active">
-            <span class="material-symbols-rounded">dashboard</span>
-            AI Dashboard
-          </a>
-          <!-- Other nav links -->
+        <div class="header-right">
+          <button onclick="window.location.href='tasks.html'" class="calendar-btn">
+            <span class="material-symbols-rounded">calendar_today</span>
+            Calendar
+          </button>
         </div>
-        <button onclick="window.location.href='../home.html'" class="back-btn">
-          <span class="material-symbols-rounded">arrow_back</span>
-          Back to Dashboard
-        </button>
-      </nav>
+      </header>
 
       <!-- Main Content -->
       <main class="main-content">
-        <header class="page-header">
-          <h1>AI Dashboard</h1>
-          <p>Your Personalized AI-Powered Command Center</p>
-        </header>
-
-        <!-- AI Insights Grid -->
-        <div class="insights-grid">
-          <div class="insight-card">
-            <h3>Business Health Score</h3>
-            <div class="score-circle">
-              <span class="score">85</span>
-              <span class="label">Good</span>
+        <!-- KPI Overview Section -->
+        <section class="metrics-section">
+          <h2>Key Metrics</h2>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-icon">
+                <span class="material-symbols-rounded">trending_up</span>
+              </div>
+              <div class="metric-info">
+                <h3>Monthly Revenue</h3>
+                <p class="metric-value">$24,500</p>
+                <span class="metric-change positive">+15.3%</span>
+              </div>
             </div>
-            <div class="recommendations">
-              <h4>AI Recommendations</h4>
-              <ul>
-                <li>Optimize customer acquisition</li>
-                <li>Review pricing strategy</li>
-              </ul>
+
+            <div class="metric-card">
+              <div class="metric-icon">
+                <span class="material-symbols-rounded">group</span>
+              </div>
+              <div class="metric-info">
+                <h3>Active Users</h3>
+                <p class="metric-value">1,234</p>
+                <span class="metric-change positive">+22.8%</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon">
+                <span class="material-symbols-rounded">shopping_cart</span>
+              </div>
+              <div class="metric-info">
+                <h3>Conversion Rate</h3>
+                <p class="metric-value">3.8%</p>
+                <span class="metric-change negative">-2.1%</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon">
+                <span class="material-symbols-rounded">currency_exchange</span>
+              </div>
+              <div class="metric-info">
+                <h3>Burn Rate</h3>
+                <p class="metric-value">$12,300</p>
+                <span class="metric-change neutral">0%</span>
+              </div>
             </div>
           </div>
+        </section>
 
-          <div class="insight-card">
-            <h3>Growth Trajectory</h3>
-            <div class="chart-area">
-              <!-- Chart will be rendered here -->
+        <!-- Tasks Progress Section -->
+        <section class="progress-section">
+          <h2>Current Sprint Progress</h2>
+          <div class="progress-grid">
+            <div class="progress-card">
+              <div class="progress-header">
+                <h3>Product Development</h3>
+                <span class="progress-percentage">75%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 75%"></div>
+              </div>
+              <p>12 of 16 tasks completed</p>
+            </div>
+
+            <div class="progress-card">
+              <div class="progress-header">
+                <h3>Marketing Campaign</h3>
+                <span class="progress-percentage">45%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 45%"></div>
+              </div>
+              <p>5 of 11 tasks completed</p>
+            </div>
+
+            <div class="progress-card">
+              <div class="progress-header">
+                <h3>Customer Feedback</h3>
+                <span class="progress-percentage">90%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 90%"></div>
+              </div>
+              <p>18 of 20 responses collected</p>
             </div>
           </div>
+        </section>
 
-          <div class="insight-card">
-            <h3>Priority Tasks</h3>
-            <div class="task-list">
-              <!-- AI-suggested tasks -->
+        <!-- Upcoming Deadlines -->
+        <section class="deadlines-section">
+          <h2>Upcoming Deadlines</h2>
+          <div class="deadlines-grid">
+            <div class="deadline-card">
+              <div class="deadline-date">
+                <span class="day">15</span>
+                <span class="month">MAR</span>
+              </div>
+              <div class="deadline-info">
+                <h3>Beta Launch</h3>
+                <p>Product version 2.0 release</p>
+              </div>
+              <span class="deadline-status">High Priority</span>
             </div>
-          </div>
-        </div>
 
-        <!-- AI Action Center -->
-        <section class="action-center">
-          <h2>AI Action Center</h2>
-          <div class="action-grid">
-            <button class="action-btn">
-              <span class="material-symbols-rounded">analytics</span>
-              Generate Report
-            </button>
-            <button class="action-btn">
-              <span class="material-symbols-rounded">trending_up</span>
-              Growth Analysis
-            </button>
-            <button class="action-btn">
-              <span class="material-symbols-rounded">schedule</span>
-              Schedule Review
-            </button>
+            <div class="deadline-card">
+              <div class="deadline-date">
+                <span class="day">22</span>
+                <span class="month">MAR</span>
+              </div>
+              <div class="deadline-info">
+                <h3>Investor Pitch</h3>
+                <p>Series A funding presentation</p>
+              </div>
+              <span class="deadline-status">Critical</span>
+            </div>
+
+            <div class="deadline-card">
+              <div class="deadline-date">
+                <span class="day">28</span>
+                <span class="month">MAR</span>
+              </div>
+              <div class="deadline-info">
+                <h3>Marketing Launch</h3>
+                <p>Social media campaign kickoff</p>
+              </div>
+              <span class="deadline-status">Medium</span>
+            </div>
           </div>
         </section>
       </main>
-
-      <!-- AI Assistant Sidebar -->
-      <aside class="ai-sidebar">
-        <!-- Similar to startup-strategy.html -->
-      </aside>
     </div>
-    <script src="ai-dashboard.js"></script>
   </body>
 </html>

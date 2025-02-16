@@ -460,22 +460,83 @@ nav {
   margin: 0 auto;
 }
 
+/* Base dashboard item styles */
 .dashboard-item {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
   padding: 2rem;
   border-radius: 15px;
+  text-align: center;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  backdrop-filter: blur(10px);
 }
 
+/* Common hover transform */
+.dashboard-item:hover {
+  transform: translateY(-15px) scale(1.02);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Unique hover effects for each item */
+.dashboard-item[data-color="blue"]:hover {
+  border-color: #00a8ff;
+  box-shadow: 0 0 30px rgba(0, 168, 255, 0.3);
+}
+
+.dashboard-item[data-color="cyan"]:hover {
+  border-color: #00ffdd;
+  box-shadow: 0 0 30px rgba(0, 255, 221, 0.3);
+}
+
+.dashboard-item[data-color="purple"]:hover {
+  border-color: #b14ef4;
+  box-shadow: 0 0 30px rgba(177, 78, 244, 0.3);
+}
+
+.dashboard-item[data-color="pink"]:hover {
+  border-color: #ff2e93;
+  box-shadow: 0 0 30px rgba(255, 46, 147, 0.3);
+}
+
+.dashboard-item[data-color="orange"]:hover {
+  border-color: #ff9f1a;
+  box-shadow: 0 0 30px rgba(255, 159, 26, 0.3);
+}
+
+.dashboard-item[data-color="indigo"]:hover {
+  border-color: #4b7bec;
+  box-shadow: 0 0 30px rgba(75, 123, 236, 0.3);
+}
+
+.dashboard-item[data-color="gold"]:hover {
+  border-color: #ffd900;
+  box-shadow: 0 0 30px rgba(255, 217, 0, 0.3);
+}
+
+.dashboard-item[data-color="teal"]:hover {
+  border-color: #00d2d3;
+  box-shadow: 0 0 30px rgba(0, 210, 211, 0.3);
+}
+
+.dashboard-item[data-color="green"]:hover {
+  border-color: #2ecc71;
+  box-shadow: 0 0 30px rgba(46, 204, 113, 0.3);
+}
+
+.dashboard-item[data-color="violet"]:hover {
+  border-color: #9c88ff;
+  box-shadow: 0 0 30px rgba(156, 136, 255, 0.3);
+}
+
+.dashboard-item[data-color="slate"]:hover {
+  border-color: #a5b1c2;
+  box-shadow: 0 0 30px rgba(165, 177, 194, 0.3);
+}
+
+/* Common styles for all items */
 .item-icon {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   transition: transform 0.3s ease;
 }
 
@@ -484,10 +545,13 @@ nav {
 }
 
 .dashboard-item h2 {
-  font-family: "Outfit", sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: white;
+  color: var(--neon-cyan);
+  background: linear-gradient(45deg, var(--neon-cyan), var(--electric-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .dashboard-item p {
@@ -496,59 +560,38 @@ nav {
   line-height: 1.5;
 }
 
-/* Color-specific hover effects */
-.dashboard-item[data-color="blue"]:hover {
-  background: rgba(33, 150, 243, 0.1);
-  box-shadow: 0 0 30px rgba(33, 150, 243, 0.3);
-  border-color: rgba(33, 150, 243, 0.5);
+/* Color-specific backgrounds */
+.dashboard-item[data-color="violet"] {
+  background: linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(167, 139, 250, 0.1));
 }
 
-.dashboard-item[data-color="purple"]:hover {
-  background: rgba(156, 39, 176, 0.1);
-  box-shadow: 0 0 30px rgba(156, 39, 176, 0.3);
-  border-color: rgba(156, 39, 176, 0.5);
+.dashboard-item[data-color="slate"] {
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.1), rgba(148, 163, 184, 0.1));
 }
 
+/* Consistent hover effects for all items */
+.dashboard-item[data-color="violet"]:hover,
+.dashboard-item[data-color="slate"]:hover,
+.dashboard-item[data-color="blue"]:hover,
+.dashboard-item[data-color="cyan"]:hover,
+.dashboard-item[data-color="purple"]:hover,
+.dashboard-item[data-color="pink"]:hover,
+.dashboard-item[data-color="orange"]:hover,
+.dashboard-item[data-color="indigo"]:hover,
+.dashboard-item[data-color="gold"]:hover,
+.dashboard-item[data-color="teal"]:hover,
 .dashboard-item[data-color="green"]:hover {
-  background: rgba(76, 175, 80, 0.1);
-  box-shadow: 0 0 30px rgba(76, 175, 80, 0.3);
-  border-color: rgba(76, 175, 80, 0.5);
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 255, 242, 0.3);
+  border-color: var(--neon-cyan);
 }
 
-.dashboard-item[data-color="orange"]:hover {
-  background: rgba(255, 152, 0, 0.1);
-  box-shadow: 0 0 30px rgba(255, 152, 0, 0.3);
-  border-color: rgba(255, 152, 0, 0.5);
-}
-
-.dashboard-item[data-color="pink"]:hover {
-  background: rgba(233, 30, 99, 0.1);
-  box-shadow: 0 0 30px rgba(233, 30, 99, 0.3);
-  border-color: rgba(233, 30, 99, 0.5);
-}
-
-.dashboard-item[data-color="cyan"]:hover {
-  background: rgba(0, 188, 212, 0.1);
-  box-shadow: 0 0 30px rgba(0, 188, 212, 0.3);
-  border-color: rgba(0, 188, 212, 0.5);
-}
-
-.dashboard-item[data-color="gold"]:hover {
-  background: rgba(255, 193, 7, 0.1);
-  box-shadow: 0 0 30px rgba(255, 193, 7, 0.3);
-  border-color: rgba(255, 193, 7, 0.5);
-}
-
-.dashboard-item[data-color="indigo"]:hover {
-  background: rgba(63, 81, 181, 0.1);
-  box-shadow: 0 0 30px rgba(63, 81, 181, 0.3);
-  border-color: rgba(63, 81, 181, 0.5);
-}
-
-.dashboard-item[data-color="teal"]:hover {
-  background: rgba(0, 150, 136, 0.1);
-  box-shadow: 0 0 30px rgba(0, 150, 136, 0.3);
-  border-color: rgba(0, 150, 136, 0.5);
+/* Update the dashboard item styles to include the new colors */
+.dashboard-item[data-color="violet"] .item-icon,
+.dashboard-item[data-color="slate"] .item-icon {
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+  animation: iconPulse 2s ease-in-out infinite;
 }
 
 /* Responsive Design */

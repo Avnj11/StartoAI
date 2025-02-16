@@ -1,0 +1,305 @@
+/* Page Layout */
+.page-container {
+  min-height: 100vh;
+  background: var(--primary-dark);
+  color: white;
+  overflow-x: hidden;
+}
+
+.main-content {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, var(--neon-cyan), var(--electric-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.metric-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.metric-icon {
+  background: rgba(0, 255, 255, 0.1);
+  border-radius: 12px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metric-icon .material-symbols-rounded {
+  font-size: 2rem;
+  color: var(--neon-cyan);
+}
+
+.metric-info h3 {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5rem;
+}
+
+.metric-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.metric-change {
+  font-size: 0.9rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.metric-change.positive {
+  background: rgba(0, 255, 0, 0.1);
+  color: #00ff00;
+}
+
+.metric-change.negative {
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff4444;
+}
+
+.metric-change.neutral {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* Progress Section */
+.progress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.progress-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.progress-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.progress-header h3 {
+  font-size: 1.1rem;
+  color: var(--neon-cyan);
+}
+
+.progress-percentage {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.progress-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--neon-cyan), var(--electric-blue));
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.progress-card p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+/* Deadlines Section */
+.deadlines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.deadline-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.deadline-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
+}
+
+.deadline-date {
+  text-align: center;
+  min-width: 60px;
+}
+
+.deadline-date .day {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--neon-cyan);
+  display: block;
+}
+
+.deadline-date .month {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.deadline-info {
+  flex: 1;
+}
+
+.deadline-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.deadline-info p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.deadline-status {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.deadline-status:contains("High Priority") {
+  background: rgba(255, 166, 0, 0.1);
+  color: orange;
+}
+
+.deadline-status:contains("Critical") {
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff4444;
+}
+
+.deadline-status:contains("Medium") {
+  background: rgba(0, 255, 255, 0.1);
+  color: var(--neon-cyan);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+
+  .metric-card,
+  .progress-card,
+  .deadline-card {
+    padding: 1rem;
+  }
+
+  .deadline-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .deadline-date {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Header Alignment */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 40px; /* Fixed height to match other header elements */
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.back-btn .material-symbols-rounded {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.header-left h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.5rem;
+  background: linear-gradient(45deg, var(--neon-cyan), var(--electric-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  line-height: 40px; /* Match height of back button */
+}
