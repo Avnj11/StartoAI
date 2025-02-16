@@ -1157,3 +1157,9 @@ nav {
 .footer-divider {
   margin: 0 auto;
 }
+
+/* Add new color for Beta Testing card */
+.dashboard-item[data-color="rose"]:hover {
+  border-color: #ff4d6d;
+  box-shadow: 0 0 30px rgba(255, 77, 109, 0.3);
+}
