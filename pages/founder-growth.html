@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Founder Growth | CyberCypher</title>
+    <link rel="stylesheet" href="../cyc4.css" />
+    <link rel="stylesheet" href="founder-growth.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- Header -->
+      <header class="top-header">
+        <div class="header-left">
+          <button onclick="window.location.href='../dashboard.html'" class="back-btn">
+            <span class="material-symbols-rounded">arrow_back</span>
+            Back
+          </button>
+          <h1>Founder Growth</h1>
+        </div>
+        <div class="header-right">
+          <button onclick="window.location.href='tasks.html'" class="calendar-btn">
+            <span class="material-symbols-rounded">calendar_today</span>
+            Calendar
+          </button>
+          <div class="user-info" onclick="window.location.href='profile.html'" style="cursor: pointer">
+            <img src="../images/user.jpg" alt="Profile" class="profile-pic" />
+            <span class="user-name">John Doe</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Split Container -->
+      <div class="split-container">
+        <!-- Main Content -->
+        <div class="main-content">
+          <!-- Wellbeing Dashboard -->
+          <section class="wellbeing-dashboard">
+            <h2>Wellbeing Dashboard</h2>
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <div class="metric-icon">😴</div>
+                <h3>Sleep Quality</h3>
+                <div class="metric-progress">
+                  <div class="progress-bar" style="width: 75%"></div>
+                </div>
+                <span class="metric-value">7.5 hrs avg</span>
+              </div>
+              <div class="metric-card">
+                <div class="metric-icon">🧘</div>
+                <h3>Stress Level</h3>
+                <div class="metric-progress">
+                  <div class="progress-bar" style="width: 60%"></div>
+                </div>
+                <span class="metric-value">Moderate</span>
+              </div>
+              <div class="metric-card">
+                <div class="metric-icon">⚡</div>
+                <h3>Energy Level</h3>
+                <div class="metric-progress">
+                  <div class="progress-bar" style="width: 80%"></div>
+                </div>
+                <span class="metric-value">High</span>
+              </div>
+              <div class="metric-card">
+                <div class="metric-icon">🎯</div>
+                <h3>Focus Time</h3>
+                <div class="metric-progress">
+                  <div class="progress-bar" style="width: 65%"></div>
+                </div>
+                <span class="metric-value">4.5 hrs/day</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Growth Areas -->
+          <section class="growth-areas">
+            <h2>Growth Areas</h2>
+            <div class="areas-grid">
+              <div class="area-card">
+                <span class="material-symbols-rounded">psychology</span>
+                <h3>Mental Resilience</h3>
+                <p>Build mental toughness and emotional intelligence</p>
+                <button class="explore-btn">Explore Resources</button>
+              </div>
+              <div class="area-card">
+                <span class="material-symbols-rounded">schedule</span>
+                <h3>Time Management</h3>
+                <p>Optimize your schedule and increase productivity</p>
+                <button class="explore-btn">Explore Resources</button>
+              </div>
+              <div class="area-card">
+                <span class="material-symbols-rounded">groups</span>
+                <h3>Leadership Skills</h3>
+                <p>Develop effective leadership and team management</p>
+                <button class="explore-btn">Explore Resources</button>
+              </div>
+              <div class="area-card">
+                <span class="material-symbols-rounded">balance</span>
+                <h3>Work-Life Balance</h3>
+                <p>Maintain harmony between business and personal life</p>
+                <button class="explore-btn">Explore Resources</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Daily Insights -->
+          <section class="daily-insights">
+            <h2>Daily Insights</h2>
+            <div class="insight-card">
+              <div class="insight-header">
+                <span class="material-symbols-rounded">tips_and_updates</span>
+                <h3>Today's Focus</h3>
+              </div>
+              <p class="insight-text">
+                "Take regular breaks to maintain peak performance. The Pomodoro Technique suggests 25 minutes of focused
+                work followed by a 5-minute break."
+              </p>
+              <div class="insight-actions">
+                <button class="action-btn">
+                  <span class="material-symbols-rounded">bookmark</span>
+                  Save
+                </button>
+                <button class="action-btn">
+                  <span class="material-symbols-rounded">share</span>
+                  Share
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- AI Assistant -->
+        <div class="ai-assistant">
+          <div class="ai-header">
+            <h3>Wellbeing Assistant</h3>
+            <span class="status-indicator">Online</span>
+          </div>
+          <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+              <div class="message-content">
+                <p>Hello! I'm your Wellbeing Assistant. I can help you with:</p>
+                <ul>
+                  <li>Stress management techniques</li>
+                  <li>Work-life balance tips</li>
+                  <li>Productivity optimization</li>
+                  <li>Mental health resources</li>
+                </ul>
+                <p>How can I support your growth today?</p>
+              </div>
+            </div>
+          </div>
+          <form id="chatForm" class="chat-input-form">
+            <input type="text" id="userInput" placeholder="Ask for wellbeing advice..." required />
+            <button type="submit">
+              <span class="material-symbols-rounded">send</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="founder-growth.js"></script>
+  </body>
+</html>
